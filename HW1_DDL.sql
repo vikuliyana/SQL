@@ -1,8 +1,8 @@
 /*
-Создать таблицу salary
-- id. Serial  primary key,
+Create a 'salary' table 
+- id. Serial primary key,
 - monthly_salary. Int, not null
-Наполнить таблицу salary 15 строками:
+Fill the salary table with 15 rows:
 */
 
 create table salary(
@@ -31,10 +31,10 @@ values  (1000),
 		(2500);
 
 /*
-Создать таблицу employees
-- id. serial,  primary key,
+Create an 'employees' table 
+- id. serial, primary key,
 - employee_name. Varchar(50), not null
-Наполнить таблицу employee 70 строками.
+Fill the employee table with 70 rows.
 */
 
 create table employees(
@@ -117,12 +117,12 @@ values  ('Liam'),
 select * from employees;
 
 /*
-Создать таблицу employee_salary
-- id. Serial  primary key,
+Create an 'employee_salary' table 
+- id. Serial primary key,
 - employee_id. Int, not null, unique
 - salary_id. Int, not null
-Наполнить таблицу employee_salary 40 строками:
-- в 10 строк из 40 вставить несуществующие employee_id
+Fill the employee_salary table with 40 rows:
+- insert non-existent employee_id in 10 lines out of 40
 */
 
 create table employee_salary(
@@ -178,11 +178,11 @@ set id_employee = 26
 where id = 26;
 
 /*
-Создать таблицу roles
+Create a 'roles' table
 - id. Serial  primary key,
 - role_name. int, not null, unique
-Поменять тип столба role_name с int на varchar(30)
-Наполнить таблицу roles 20 строками:
+Change the column type role_name from int to varchar(30)
+Fill the 'roles' table with 20 rows:
 */
 
 create table roles(
@@ -218,11 +218,11 @@ values  ('Junior Python developer'),
 select * from roles;
 
 /*
-Создать таблицу roles_employee
-- id. Serial  primary key,
-- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
-- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
-Наполнить таблицу roles_employee 40 строками:
+Create a 'roles_employee' table
+- id. Serial primary key,
+- employee_id. Int, not null, unique (foreign key for the 'employees' table, id field)
+- role_id. Int, not null (foreign key for the 'roles' table, id field)
+Fill the roles_employee table with 40 rows:
 */
 
 create table roles_employee(
